@@ -5,155 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YANCHYNNYA MUSIC</title>
 <style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#0f0f0f;
-  color:white;
-}
-
-header{
-  padding:60px 20px;
-  text-align:center;
-  background: linear-gradient(180deg,#000,#1a1a1a);
-}
-
-header img{
-  width:180px;
-  margin-bottom:20px;
-}
-
-header h1{
-  font-size:36px;
-  margin:10px 0;
-}
-
-header p{
-  font-size:18px;
-  line-height:1.5;
-  max-width:700px;
-  margin:auto;
-}
-
-nav{
-  display:flex;
-  justify-content:center;
-  margin:20px 0;
-  gap:15px;
-}
-
-nav button{
-  padding:12px 25px;
-  background:#3aa6ff;
-  color:white;
-  border:none;
-  cursor:pointer;
-  border-radius:6px;
-  transition:0.3s;
-}
-
-nav button:hover{
-  background:#1e88e5;
-}
-
-.section{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
-  display:none;
-  opacity:0;
-  transition: opacity 0.5s ease;
-}
-
-.section.active{
-  display:block;
-  opacity:1;
-}
-
-h2{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-/* Post styling */
-.post{
-  background:#1a1a1a;
-  padding:15px 20px;
-  margin-bottom:15px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-.post p{
-  margin:0;
-}
-
-.post .date{
-  font-size:12px;
-  opacity:0.6;
-  display:block;
-  margin-top:5px;
-}
-
-/* Track cards */
-.track-card{
-  background:#1a1a1a;
-  padding:15px 20px;
-  margin-bottom:15px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  cursor:pointer;
-  transition: transform 0.3s;
-}
-
-.track-card:hover{
-  transform: translateY(-3px);
-}
-
-.track-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.track-player{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.5s ease;
-  margin-top:10px;
-}
-
-.track-player.open{
-  max-height:200px;
-}
-
-.track-player audio{
-  width:100%;
-  outline:none;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 25px;
-  font-size:16px;
-  background:#3aa6ff;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#1e88e5;
-  transform:scale(1.05);
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  opacity:0.5;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#0f0f0f;color:white;}
+header{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#000,#1a1a1a);}
+header img{width:180px;margin-bottom:20px;}
+header h1{font-size:36px;margin:10px 0;}
+header p{font-size:18px;line-height:1.5;max-width:700px;margin:auto;}
+nav{display:flex;justify-content:center;margin:20px 0;gap:15px;}
+nav button{padding:12px 25px;background:#3aa6ff;color:white;border:none;cursor:pointer;border-radius:6px;transition:0.3s;}
+nav button:hover{background:#1e88e5;}
+.section{max-width:900px;margin:auto;padding:40px 20px;display:none;opacity:0;transition: opacity 0.5s ease;}
+.section.active{display:block;opacity:1;}
+h2{text-align:center;margin-bottom:30px;}
+.post{background:#1a1a1a;padding:15px 20px;margin-bottom:15px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+.post p{margin:0;}
+.post .date{font-size:12px;opacity:0.6;display:block;margin-top:5px;}
+.track-card{background:#1a1a1a;padding:15px 20px;margin-bottom:15px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.3);cursor:pointer;transition:transform 0.3s;}
+.track-card:hover{transform: translateY(-3px);}
+.track-header{display:flex;justify-content:space-between;align-items:center;}
+.track-player{max-height:0;overflow:hidden;transition:max-height 0.5s ease;margin-top:10px;}
+.track-player.open{max-height:200px;}
+.track-player audio{width:100%;outline:none;}
+.btn{display:inline-block;margin-top:10px;padding:8px 25px;font-size:16px;background:#3aa6ff;color:white;text-decoration:none;border-radius:6px;transition:0.3s;}
+.btn:hover{background:#1e88e5;transform:scale(1.05);}
+footer{text-align:center;padding:30px;opacity:0.5;}
 </style>
 </head>
 <body>
@@ -170,128 +44,102 @@ footer{
 <button data-section="contacts">Contacts</button>
 </nav>
 
-<!-- HOME SECTION -->
 <section id="home" class="section active">
 <h2>Home</h2>
-
-<!-- Посты -->
 <div class="post" data-date="2026-03-10">
   <p>Welcome to the official YANCHYNNYA MUSIC website!</p>
   <span class="date">10 March 2026</span>
 </div>
-
 </section>
 
-<!-- MUSIC SECTION -->
 <section id="music" class="section">
 <h2>Music</h2>
 
-<!-- Track cards для всех 22 треков -->
+<!-- Все 22 трека -->
 <div class="track-card">
   <div class="track-header"><span>YANCHALKA IN THE AREA</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/YANCHALKA_IN_THE_AREA.mp3" type="audio/mpeg"></audio><a href="tracks/YANCHALKA_IN_THE_AREA.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>SKYFALL</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/SKYFALL.mp3" type="audio/mpeg"></audio><a href="tracks/SKYFALL.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>LITVINERGY</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/LITVINERGY.mp3" type="audio/mpeg"></audio><a href="tracks/LITVINERGY.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>SCHOVEL</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/SCHOVEL.mp3" type="audio/mpeg"></audio><a href="tracks/SCHOVEL.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>YANCHALKA IN THE AREA REMIX (DEMO)</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/YANCHALKA_IN_THE_AREA_REMIX_DEMO.mp3" type="audio/mpeg"></audio><a href="tracks/YANCHALKA_IN_THE_AREA_REMIX_DEMO.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>YANCHALKA IN THE AREA REMIX</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/YANCHALKA_IN_THE_AREA_REMIX.mp3" type="audio/mpeg"></audio><a href="tracks/YANCHALKA_IN_THE_AREA_REMIX.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>ZOMBIE</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/ZOMBIE.mp3" type="audio/mpeg"></audio><a href="tracks/ZOMBIE.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>MEANING</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/MEANING.mp3" type="audio/mpeg"></audio><a href="tracks/MEANING.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>MOTIVATION</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/MOTIVATION.mp3" type="audio/mpeg"></audio><a href="tracks/MOTIVATION.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>NA_KOLENI</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/NA_KOLENI.mp3" type="audio/mpeg"></audio><a href="tracks/NA_KOLENI.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>DONOR_KEBABO</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/DONOR_KEBABO.mp3" type="audio/mpeg"></audio><a href="tracks/DONOR_KEBABO.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>SHKVARKA</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/SHKVARKA.mp3" type="audio/mpeg"></audio><a href="tracks/SHKVARKA.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>RAP</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/RAP.mp3" type="audio/mpeg"></audio><a href="tracks/RAP.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>SHKVAROCHYANNYA</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/SHKVAROCHYANNYA.mp3" type="audio/mpeg"></audio><a href="tracks/SHKVAROCHYANNYA.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>YANCHALKA IN THE SLOWED</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/YANCHALKA_IN_THE_SLOWED.mp3" type="audio/mpeg"></audio><a href="tracks/YANCHALKA_IN_THE_SLOWED.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>YANCHALKA IN THE SPEED</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/YANCHALKA_IN_THE_SPEED.mp3" type="audio/mpeg"></audio><a href="tracks/YANCHALKA_IN_THE_SPEED.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>SAD</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/SAD.mp3" type="audio/mpeg"></audio><a href="tracks/SAD.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>KLITCHATKA</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/KLITCHATKA.mp3" type="audio/mpeg"></audio><a href="tracks/KLITCHATKA.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>RONALDO</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/RONALDO.mp3" type="audio/mpeg"></audio><a href="tracks/RONALDO.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>B.O.M.J</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/B.O.M.J.mp3" type="audio/mpeg"></audio><a href="tracks/B.O.M.J.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>B.O.M.J (Slowed)</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/B.O.M.J_SLOWED.mp3" type="audio/mpeg"></audio><a href="tracks/B.O.M.J_SLOWED.mp3" download class="btn">Download</a></div>
 </div>
-
 <div class="track-card">
   <div class="track-header"><span>B.O.M.J (SpeedUp)</span><span>▼</span></div>
   <div class="track-player"><audio controls><source src="tracks/B.O.M.J_SPEEDUP.mp3" type="audio/mpeg"></audio><a href="tracks/B.O.M.J_SPEEDUP.mp3" download class="btn">Download</a></div>
@@ -299,7 +147,6 @@ footer{
 
 </section>
 
-<!-- CONTACTS SECTION -->
 <section id="contacts" class="section">
 <h2>Contacts</h2>
 <p>Telegram: <a href="https://t.me/YANCHYNNYAOFFICIAL" class="btn">Open Telegram</a></p>
@@ -307,9 +154,7 @@ footer{
 <p>TikTok: <a href="#" class="btn">Open TikTok</a></p>
 </section>
 
-<footer>
-© 2026 YANCHYNNYA MUSIC
-</footer>
+<footer>© 2026 YANCHYNNYA MUSIC</footer>
 
 <script>
 // Переключение секций
@@ -318,24 +163,21 @@ const sections = document.querySelectorAll('.section');
 buttons.forEach(btn=>{
   btn.addEventListener('click',()=>{
     sections.forEach(sec=>sec.classList.remove('active'));
-    const id = btn.getAttribute('data-section');
-    document.getElementById(id).classList.add('active');
+    document.getElementById(btn.getAttribute('data-section')).classList.add('active');
   });
 });
 
-// Раскрытие плееров — только один открыт
+// Открытие плеера — только один одновременно
 const cards = document.querySelectorAll('.track-card');
 cards.forEach(card=>{
   card.addEventListener('click', ()=>{
     const currentPlayer = card.querySelector('.track-player');
-    // Закрываем все плееры
     cards.forEach(c=>{
       const p = c.querySelector('.track-player');
       if(p !== currentPlayer) p.classList.remove('open');
       const arrow = c.querySelector('span:nth-child(2)');
       if(p !== currentPlayer) arrow.textContent = '▼';
     });
-    // Открываем/закрываем текущий
     currentPlayer.classList.toggle('open');
     const arrow = card.querySelector('span:nth-child(2)');
     arrow.textContent = currentPlayer.classList.contains('open') ? '▲' : '▼';
@@ -346,9 +188,7 @@ cards.forEach(card=>{
 function sortPosts(){
   const home = document.getElementById('home');
   const posts = Array.from(home.querySelectorAll('.post'));
-  posts.sort((a,b)=>{
-    return b.getAttribute('data-date').localeCompare(a.getAttribute('data-date'));
-  });
+  posts.sort((a,b)=>b.getAttribute('data-date').localeCompare(a.getAttribute('data-date')));
   posts.forEach(post => home.appendChild(post));
 }
 sortPosts();
